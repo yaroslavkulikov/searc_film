@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Player</title>
+</head>
+<body>
+    <iframe id="movieIframe" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+    <script>
+        // Получаем значение iframe src из параметров URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const iframeSrc = urlParams.get('iframe_src');
+
+        // Устанавливаем значение iframe src
+        document.getElementById('movieIframe').src = iframeSrc;
+    </script>
+</body>
+</html>
